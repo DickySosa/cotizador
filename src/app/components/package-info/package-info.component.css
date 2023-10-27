@@ -1,0 +1,33 @@
+.description-container{
+    display: flex;
+    justify-content: center;
+    column-gap: 3rem;
+    margin-bottom: 5rem;
+}
+
+/*Package information card style*/
+
+.card-style{
+    /* display: grid; */
+    /* flex-direction: column; */
+    align-items:center;
+    border-radius: 5px;
+    row-gap: 5px;
+}
+
+.section-style{
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: -6px 12px 22px 4px #000000;
+    width: 300px;
+    height: 260px;
+}
+
+.height {
+    margin-bottom: 100px;
+  }
+  
+  .card-style input,select {
+    margin-bottom: 10px; /* Ajusta el valor según el espacio vertical deseado */
+  }
+  

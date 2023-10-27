@@ -1,0 +1,75 @@
+<main class="description-container">
+
+    <section class="section-style">
+
+        <h3>Informacion del paquete</h3>
+
+        <div class="card-style">
+            <label for="weight">Peso:</label>
+            <input type="text" id="weight" name="weight" [(ngModel)]="packageInfo.weight"> <br>
+
+            <label for="length">Largo:</label>
+            <input type="text" id="length" name="length" [(ngModel)]="packageInfo.length"><br>
+
+            <label for="width">Ancho:</label>
+            <input type="text" id="width" name="width" [(ngModel)]="packageInfo.width"><br>
+
+            <label for="height">Alto:</label>
+            <input type="text" class="height" name="height" [(ngModel)]="packageInfo.height">
+        </div>
+
+    </section>
+    
+    <section class="section-style">
+
+        <h3>Origen y destino</h3>
+
+        <div class="card-style">
+            <label for="origin">Región de origen:</label>
+            <select id="origin" name="origin" [(ngModel)]="packageInfo.origin">
+                <option value="Asia">Asia</option>
+                <option value="Africa">Africa</option>
+                <option value="North-America">Norteamérica</option>
+                <option value="Europe">Europa</option>
+                <option value="Oceania">Oceanía</option>
+                <option value="South-America">Sudamérica</option>
+                <option value="Antarctica">Antártida</option>
+                <option value="Polar-Regions">Regiones polares</option>
+                <option value="Central-America">Centroamérica</option>
+            </select> <br>
+            
+            <label for="destination">Región destino:</label>
+            <select id="destination" name="destination" [(ngModel)]="packageInfo.destination">
+                <option value="Asia">Asia</option>
+                <option value="Africa">Africa</option>
+                <option value="North-America">Norteamérica</option>
+                <option value="Europe">Europa</option>
+                <option value="Oceania">Oceanía</option>
+                <option value="South-America">Sudamérica</option>
+                <option value="Antarctica">Antártida</option>
+                <option value="Polar-Regions">Regiones polares</option>
+                <option value="Central-America">Centroamérica</option>
+            </select>
+            
+            
+        </div>
+
+    </section>
+</main>
+
+
+<section>
+    <label for="discount">Codigo de descuento:</label>
+    <input type="text" id="discount" name="discount" [(ngModel)]="packageInfo.discountCode">
+    
+    <!-- fix this later with interpolation-->
+    <p *ngIf="finalPrice">Costo total del envío: {{finalPrice}}</p>
+    <p *ngIf="discountPrice">Costo con descuento: {{discountPrice}}</p>
+
+</section>
+
+<footer>
+    <button
+    (click)="handleClick()"
+    >Cotizar</button>
+</footer>
