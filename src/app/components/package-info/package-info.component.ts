@@ -33,9 +33,9 @@ export class PackageInfoComponent {
 
   handleClick (){
 
-    console.log(this.packageInfo)
+    console.log("hola")
 
-    
+
   }
 
   calculateDiscount(originalPrice:number, clientLevel:string):number{
